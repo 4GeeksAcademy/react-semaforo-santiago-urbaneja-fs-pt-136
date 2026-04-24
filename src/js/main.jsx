@@ -1,18 +1,23 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-//Bootstrap
+// Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap"
+import "bootstrap";
 
-// index.css'
-import '../styles/index.css'
+// CSS Global
+import '../styles/index.css';
 
-// components
+// Componentes
 import Home from './components/Home';
+import Palito from './components/Palito';
 
+// Plantamos UNA SOLA raíz y metemos ambos componentes adentro
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Home/>
-  </React.StrictMode>,
-)
+    <div className="d-flex flex-column align-items-center mt-5">
+      <Palito />
+      <Home />
+    </div>
+  </React.StrictMode>
+);
